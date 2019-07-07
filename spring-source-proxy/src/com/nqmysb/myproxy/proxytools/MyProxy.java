@@ -3,7 +3,6 @@ package com.nqmysb.myproxy.proxytools;
 import java.io.File;
 import java.io.FileWriter;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 import javax.tools.JavaCompiler;
@@ -52,12 +51,13 @@ public class MyProxy {
 		
 		
 		try{
-			//1、生成源代码
+			//1、动态生成代理类的源代码 .java文件
 			String proxySrc = generateSrc(interfaces[0]);
 			
 			
 			//2、将生成的源代码输出到磁盘，保存为.java文件
-			String filePath = MyProxy.class.getResource("").getPath();
+			String filePath = MyProxy.class.getResource("").getPath(); //打jar包之后抛空指针
+//			String filePath = MyProxy.class.getResource("/").getPath() +"com/nqmysb/myproxy/proxytools/";
 			File f = new File(filePath + "$Proxy0.java");
 			FileWriter fw = new FileWriter(f);
 			fw.write(proxySrc);
@@ -75,9 +75,11 @@ public class MyProxy {
 		
 			//4.将class文件中的内容，动态加载到JVM中来
 			
-			//5.返回被代理后的代理对象
+			//5.返回被代理后的代理类class对象
 			Class<?> proxyClass = classLoader.findClass("$Proxy0");
+			//通过class对象和参数获取指定构造对象 
 			Constructor<?> c = proxyClass.getConstructor(MyInvocationHandler.class);
+			//删除Java文件
 			f.delete();
 			
 			return c.newInstance(myInvocationHandler);

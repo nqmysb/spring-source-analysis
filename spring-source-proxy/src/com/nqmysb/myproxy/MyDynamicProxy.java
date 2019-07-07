@@ -23,7 +23,7 @@ public class MyDynamicProxy implements MyInvocationHandler {
 		this.target = target;
 		//代理的对象必须是 suject的实现类
 		Class<? extends Subject> clazz = target.getClass();
-		
+		//获取被代理类实现的所有接口  从这里可以看出如果被代理类没有实现接口，是无法使用动态代理的
 		Class<?>[] classs = clazz.getInterfaces();
 		System.out.println("被代理对象实现的接口:"+Arrays.asList(classs));
 		return MyProxy.newProxyInstance(new MyClassLoader(), classs, this);

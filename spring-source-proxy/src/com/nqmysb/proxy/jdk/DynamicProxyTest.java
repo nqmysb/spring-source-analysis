@@ -15,6 +15,9 @@ public class DynamicProxyTest {
 //			
 			Subject subject = (Subject)new DynamicProxy().getInstance(new RealSubject());
 			System.out.println(subject.getClass());
+			System.out.println(subject.getClass().getResource("/").getPath());
+			//报错空指针  生成的代理类放在哪？ 内存中？
+			System.out.println(subject.getClass().getResource("").getPath());
 			subject.businessMethod();
 			
 			//JDK代理的原理：
