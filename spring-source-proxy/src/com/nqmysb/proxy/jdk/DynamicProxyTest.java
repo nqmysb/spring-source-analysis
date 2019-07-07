@@ -43,10 +43,7 @@ public class DynamicProxyTest {
 			//为什么？
 			//怎么做？
 			
-			//手写一个
-//			Person obj = (Person)new GPMeipo().getInstance(new XiaoXingxing());
-//			System.out.println(obj.getClass());
-//			obj.findLove();
+
 			
 			
 		} catch (Exception e) {
