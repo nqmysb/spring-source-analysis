@@ -5,7 +5,12 @@ import java.io.FileOutputStream;
 import com.nqmysb.proxy.jdk.impl.RealSubject;
 
 import sun.misc.ProxyGenerator;
-
+/**
+ * JDK动态代理测试类
+ * 
+ * @author liaocan
+ *
+ */
 public class DynamicProxyTest {
 
 	public static void main(String[] args) {
