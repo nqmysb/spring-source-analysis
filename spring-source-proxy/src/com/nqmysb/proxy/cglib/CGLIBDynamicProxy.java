@@ -38,6 +38,8 @@ public class CGLIBDynamicProxy implements MethodInterceptor {
 		System.out.println("------------"); 
 		
 		//执行代理方法
+		//obj是cglib new出的被代理的类的子类，通过super()初始化父类
+		//生成子类重写父类所有方法
 		proxy.invokeSuper(obj, args);
 		
 		System.out.println("------------");

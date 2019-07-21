@@ -1,12 +1,12 @@
 package com.nqmysb.proxy.cglib;
 
 /**
- * CGLIB动态代理测试类
+ * CGLIB动态代理Client类
  * 
  * @author liaocan
  *
  */
-public class CGLIBDynamicProxyTest {
+public class CGLIBDynamicProxyClient {
 
 	public static void main(String[] args) {
 		

@@ -6,12 +6,12 @@ import com.nqmysb.proxy.jdk.impl.RealSubject;
 
 import sun.misc.ProxyGenerator;
 /**
- * JDK动态代理测试类
+ * JDK动态代理Client类
  * 
  * @author liaocan
  *
  */
-public class DynamicProxyTest {
+public class DynamicProxyClient {
 
 	public static void main(String[] args) {
 		

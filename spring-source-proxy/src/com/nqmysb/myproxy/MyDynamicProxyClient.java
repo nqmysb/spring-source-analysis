@@ -3,13 +3,13 @@ package com.nqmysb.myproxy;
 import com.nqmysb.myproxy.impl.RealSubject;
 
 /**
- * 手写JDK动态代理测试类
+ * 手写JDK动态代理Client类
  * 
  * 
  * @author liaocan
  *
  */
-public class MyDynamicProxyTest {
+public class MyDynamicProxyClient {
 
 	public static void main(String[] args) {
 		
