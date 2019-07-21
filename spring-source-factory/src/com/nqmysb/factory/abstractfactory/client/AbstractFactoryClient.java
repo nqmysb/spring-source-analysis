@@ -60,7 +60,16 @@ public class AbstractFactoryClient {
 		System.out.println("产品名称："+dellMouse2.mouseProduct());
 		System.out.println("产品名称："+dellKeyboard2.keyboardProduct());
 
-		
+		/*		
+ 		产品名称：抽象工厂产品：华硕鼠标
+		产品名称：抽象工厂产品：华硕键盘
+		产品名称：抽象工厂产品：戴尔鼠标
+		产品名称：抽象工厂产品：戴尔键盘
+		产品名称：抽象工厂产品：华硕鼠标
+		产品名称：抽象工厂产品：华硕键盘
+		产品名称：抽象工厂产品：戴尔鼠标
+		产品名称：抽象工厂产品：戴尔键盘
+		*/
 		
 		
 	}
