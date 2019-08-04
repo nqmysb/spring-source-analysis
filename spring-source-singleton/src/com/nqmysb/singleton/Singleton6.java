@@ -15,7 +15,7 @@ public class Singleton6 {
 		map.put(single.getClass().getName(), single);
 	}
 
-	// 保护的默认构造子
+	// 保护的默认构造子 ?
 	protected Singleton6() {
 	}
 

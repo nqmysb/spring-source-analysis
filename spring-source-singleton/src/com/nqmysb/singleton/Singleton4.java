@@ -1,7 +1,7 @@
 package com.nqmysb.singleton;
 
 /*
- * 懒汉式单例.双重锁检查
+ * 懒汉式单例.双重锁检查 DCL，即 double-checked locking 双检锁/双重校验锁
  * 
  * @author liaocan
  */

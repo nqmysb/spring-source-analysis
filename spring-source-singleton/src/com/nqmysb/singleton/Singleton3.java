@@ -1,7 +1,7 @@
 package com.nqmysb.singleton;
 
 /*
- * 懒汉式单例.保证线程安全
+ * 懒汉式单例.保证线程安全 
  * @author liaocan
  */
 public class Singleton3 {
