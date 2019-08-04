@@ -7,26 +7,31 @@
 ## 代理模式
 
 ### [JDK动态代理](https://github.com/nqmysb/spring-source-analysis/tree/master/spring-source-proxy/src/com/nqmysb/myproxy)
-### CGLIB动态代理
+### [CGLIB动态代理](https://github.com/nqmysb/spring-source-analysis/tree/master/spring-source-proxy/src/com/nqmysb/proxy/cglib)
+
+### 
 
 ## 工厂模式
-### 简单工厂模式
-### 工厂方法模式
-### 抽象工厂模式
+### [简单工厂模式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-factory/src/com/nqmysb/factory/simplefactory/client/SimpleFactoryClient.java)
+
+### [工厂方法模式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-factory/src/com/nqmysb/factory/factorymethod/client/FactoryMethodClient.java)
+
+### [抽象工厂模式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-factory/src/com/nqmysb/factory/abstractfactory/client/AbstractFactoryClient.java)
 
 
 ## 单例模式
-### 饿汉式
-### 懒汉式
-### 懒汉安全
-### 懒汉双重锁
-### 静态内部类
-### 登记式
-### 枚举类
 
-## 策略模式
+### [饿汉式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton1.java)
+### [懒汉式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton2.java)
+### [懒汉安全](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton3.java)
+### [懒汉双重锁](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton4.java)
+### [静态内部类](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton5.java)
+### [登记式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton6.java)
+### [枚举类](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-singleton/src/com/nqmysb/singleton/Singleton7.java)
 
-## 委派模式
+## [策略模式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-strategy/src/com/nqmysb/strategy/StrategyClient.java)
+
+## [委派模式](https://github.com/nqmysb/spring-source-analysis/blob/master/spring-source-delegate/src/com/nqmysb/delegate/DelegateClient.java)
 
 
 
