@@ -1,6 +1,6 @@
 .class
-.classpath
-.project
+#.classpath
+#.project
 build
 bin
 .bak
