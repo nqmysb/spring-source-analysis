@@ -2,6 +2,7 @@ package com.nqmysb.prototype.upgrade;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -29,27 +30,40 @@ public class ColoneUtils {
 	@SuppressWarnings("unchecked")
 	public static <T extends Serializable> T clone(T obj) {
 		T cloneObj = null;
+		ByteArrayOutputStream baos = null;
+		ObjectOutputStream oos = null;
+		ByteArrayInputStream bais = null;
+		ObjectInputStream ois = null;
 		try {
 			//序列化  
 			
-			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			baos = new ByteArrayOutputStream();
 			
-			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos = new ObjectOutputStream(baos);
 			
 			//将对象序列化
 			oos.writeObject(obj);
 			
 			oos.close();
 
-			ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+			bais = new ByteArrayInputStream(baos.toByteArray());
 			
-			ObjectInputStream ois = new ObjectInputStream(bais);
+			ois = new ObjectInputStream(bais);
 			//反序列化
 			cloneObj = (T) ois.readObject();
 			
 			ois.close();
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			try {
+				baos.close();
+				oos.close();
+				bais.close();
+				ois.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		return cloneObj;
 

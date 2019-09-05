@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-import com.nqmysb.prototype.simple.ConcretePrototype;
-
 public class Person implements Serializable ,Cloneable{
 	
 	/**
@@ -21,8 +19,15 @@ public class Person implements Serializable ,Cloneable{
 
 	private ArrayList<Person> sons ;
 	
+	Person (){
+		System.out.println("这里是构造方法");
+	}
 	
-	
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#clone()
+	 * 浅拷贝
+	 */
 	protected Person clone() throws CloneNotSupportedException{
 		return (Person)super.clone();
 	}
